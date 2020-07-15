@@ -22,7 +22,7 @@ for pNum=1:numel(projections) %% loop: projections
                       thEvent=thPath.(rn).thalamicEvents.(evName).spikeArray;
                       for pop=1:size(thEvent,2) % populations in event
                           newName=join(['all_' thEvent(pop).population],''); % new name for field
-                          allEventSpikesSorted.(sf)(1).(newName)(newRow,:)=thEvent(pop).eventHist(:,1:35); % (:,1:35) is a cheap save for now
+                          allEventSpikesSorted.(sf)(1).(newName)(newRow,:)=thEvent(pop).eventHist(:,1:35); 
                       end%pop
                       newRow=1+newRow;
                    end%evs
